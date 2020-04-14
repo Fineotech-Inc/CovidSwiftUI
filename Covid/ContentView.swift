@@ -8,22 +8,40 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    
+    @State private var selectedTab: Tab = .global
+    let facts = FactsModel(cases: 1924635, deaths: 119686, recovered: 444836)
     var body: some View {
-        TabView(selection: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-            GlobalView().tabItem {
-                Text("Global")
-                Image(systemName: "globe")
-            }.tag(1)
-            Countries().tabItem {
+        TabView(selection: $selectedTab) {
+            NavigationView {
+                GlobalView(factsModel: facts).tabItem {
+                    Text("Global")
+                    Image(systemName: "globe")
+                }.tag(Tab.global)
+            }
+            NavigationView {
+            CountriesView(countries: []).tabItem {
                 Text("Countries")
                 Image(systemName: "list.dash")
-            }.tag(2)
+            }.tag(Tab.countries)
+            }
+            
             AboutView().tabItem {
                 Text("Countries")
-                Image(systemName: "a.cirlce")
-            }.tag(3)
+                Image(systemName: "list.dash")
+            }.tag(Tab.about)
         }
+    }
+}
+
+private extension ContentView {
+    
+    enum Tab: Int {
+        case global
+        case countries
+        case about
     }
 }
 
