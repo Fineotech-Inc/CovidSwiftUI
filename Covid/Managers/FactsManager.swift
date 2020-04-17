@@ -11,17 +11,18 @@ import Combine
 
 protocol FactsManagerProtocol {
     
-    func fetchFacts() -> AnyPublisher<FactsModel, Error>
+    func fetchFacts() -> AnyPublisher<FactsModel, NetworkError>
 }
 
 
 final class FactsManager: FactsManagerProtocol {
     
-    func fetchFacts() -> AnyPublisher<FactsModel, Error> {
+    func fetchFacts() -> AnyPublisher<FactsModel, NetworkError> {
         let factRequest = FactRequest()
         // Need to check how to pass APIService to all Managers
         return APIService().run(factRequest)
             .map(\.value)
             .eraseToAnyPublisher()
+    
     }
 }

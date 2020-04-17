@@ -18,6 +18,7 @@
 		1043CD19244955A0003C6D6B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD18244955A0003C6D6B /* NetworkError.swift */; };
 		1043CD1B2449564A003C6D6B /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1A2449564A003C6D6B /* NetworkLogger.swift */; };
 		1043CD1E2449567B003C6D6B /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1D2449567B003C6D6B /* Loggable.swift */; };
+		1043CD22244964A0003C6D6B /* ServerTrustManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD21244964A0003C6D6B /* ServerTrustManager.swift */; };
 		107CC4E12444ED7E005960C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E02444ED7E005960C4 /* AppDelegate.swift */; };
 		107CC4E32444ED7E005960C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E22444ED7E005960C4 /* SceneDelegate.swift */; };
 		107CC4E52444ED7E005960C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E42444ED7E005960C4 /* ContentView.swift */; };
@@ -63,6 +64,7 @@
 		1043CD18244955A0003C6D6B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1043CD1A2449564A003C6D6B /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		1043CD1D2449567B003C6D6B /* Loggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
+		1043CD21244964A0003C6D6B /* ServerTrustManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTrustManager.swift; sourceTree = "<group>"; };
 		107CC4DD2444ED7E005960C4 /* Covid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107CC4E02444ED7E005960C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107CC4E22444ED7E005960C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				1043CD1C2449566D003C6D6B /* Protocols */,
 				1043CD0724494169003C6D6B /* APIService.swift */,
 				1043CD0924494CC1003C6D6B /* CodeExtended.swift */,
+				1043CD21244964A0003C6D6B /* ServerTrustManager.swift */,
 				1043CD0B24494D95003C6D6B /* Requestable.swift */,
 				1043CD0D24494E77003C6D6B /* FactRequest.swift */,
 				1043CD18244955A0003C6D6B /* NetworkError.swift */,
@@ -378,6 +381,7 @@
 				1043CD1E2449567B003C6D6B /* Loggable.swift in Sources */,
 				107CC4E12444ED7E005960C4 /* AppDelegate.swift in Sources */,
 				1043CD1124494FA6003C6D6B /* FactsManager.swift in Sources */,
+				1043CD22244964A0003C6D6B /* ServerTrustManager.swift in Sources */,
 				107CC4E32444ED7E005960C4 /* SceneDelegate.swift in Sources */,
 				1043CD19244955A0003C6D6B /* NetworkError.swift in Sources */,
 				1043CD1424495200003C6D6B /* FactsViewModel.swift in Sources */,
@@ -490,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -544,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

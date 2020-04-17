@@ -11,5 +11,6 @@ import Foundation
 enum NetworkError: Error {
     
     case networkError(Error)
+    case parsing(description: String)
     case restAPIError(data: Data?)
 }
