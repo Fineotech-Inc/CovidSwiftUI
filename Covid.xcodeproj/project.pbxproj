@@ -15,6 +15,9 @@
 		1043CD1124494FA6003C6D6B /* FactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1024494FA6003C6D6B /* FactsManager.swift */; };
 		1043CD1424495200003C6D6B /* FactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1324495200003C6D6B /* FactsViewModel.swift */; };
 		1043CD1724495225003C6D6B /* ManagerInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1624495225003C6D6B /* ManagerInjector.swift */; };
+		1043CD19244955A0003C6D6B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD18244955A0003C6D6B /* NetworkError.swift */; };
+		1043CD1B2449564A003C6D6B /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1A2449564A003C6D6B /* NetworkLogger.swift */; };
+		1043CD1E2449567B003C6D6B /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1D2449567B003C6D6B /* Loggable.swift */; };
 		107CC4E12444ED7E005960C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E02444ED7E005960C4 /* AppDelegate.swift */; };
 		107CC4E32444ED7E005960C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E22444ED7E005960C4 /* SceneDelegate.swift */; };
 		107CC4E52444ED7E005960C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E42444ED7E005960C4 /* ContentView.swift */; };
@@ -57,6 +60,9 @@
 		1043CD1024494FA6003C6D6B /* FactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsManager.swift; sourceTree = "<group>"; };
 		1043CD1324495200003C6D6B /* FactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewModel.swift; sourceTree = "<group>"; };
 		1043CD1624495225003C6D6B /* ManagerInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInjector.swift; sourceTree = "<group>"; };
+		1043CD18244955A0003C6D6B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1043CD1A2449564A003C6D6B /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		1043CD1D2449567B003C6D6B /* Loggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
 		107CC4DD2444ED7E005960C4 /* Covid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107CC4E02444ED7E005960C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107CC4E22444ED7E005960C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,10 +113,13 @@
 		1043CD062449414E003C6D6B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1043CD1C2449566D003C6D6B /* Protocols */,
 				1043CD0724494169003C6D6B /* APIService.swift */,
 				1043CD0924494CC1003C6D6B /* CodeExtended.swift */,
 				1043CD0B24494D95003C6D6B /* Requestable.swift */,
 				1043CD0D24494E77003C6D6B /* FactRequest.swift */,
+				1043CD18244955A0003C6D6B /* NetworkError.swift */,
+				1043CD1A2449564A003C6D6B /* NetworkLogger.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -137,6 +146,14 @@
 				1043CD1624495225003C6D6B /* ManagerInjector.swift */,
 			);
 			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		1043CD1C2449566D003C6D6B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1043CD1D2449567B003C6D6B /* Loggable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		107CC4D42444ED7E005960C4 = {
@@ -358,11 +375,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1043CD1E2449567B003C6D6B /* Loggable.swift in Sources */,
 				107CC4E12444ED7E005960C4 /* AppDelegate.swift in Sources */,
 				1043CD1124494FA6003C6D6B /* FactsManager.swift in Sources */,
 				107CC4E32444ED7E005960C4 /* SceneDelegate.swift in Sources */,
+				1043CD19244955A0003C6D6B /* NetworkError.swift in Sources */,
 				1043CD1424495200003C6D6B /* FactsViewModel.swift in Sources */,
 				107CC51824454776005960C4 /* FactModel.swift in Sources */,
+				1043CD1B2449564A003C6D6B /* NetworkLogger.swift in Sources */,
 				107CC4E52444ED7E005960C4 /* ContentView.swift in Sources */,
 				1043CD0A24494CC1003C6D6B /* CodeExtended.swift in Sources */,
 				1043CD0E24494E77003C6D6B /* FactRequest.swift in Sources */,
