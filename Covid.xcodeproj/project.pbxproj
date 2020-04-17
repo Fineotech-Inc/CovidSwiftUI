@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		100EECFC244559AE0038FF7E /* CountryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100EECFB244559AE0038FF7E /* CountryDetails.swift */; };
+		1043CD0824494169003C6D6B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD0724494169003C6D6B /* APIService.swift */; };
+		1043CD0A24494CC1003C6D6B /* CodeExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD0924494CC1003C6D6B /* CodeExtended.swift */; };
+		1043CD0C24494D95003C6D6B /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD0B24494D95003C6D6B /* Requestable.swift */; };
+		1043CD0E24494E77003C6D6B /* FactRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD0D24494E77003C6D6B /* FactRequest.swift */; };
+		1043CD1124494FA6003C6D6B /* FactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1024494FA6003C6D6B /* FactsManager.swift */; };
+		1043CD1424495200003C6D6B /* FactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1324495200003C6D6B /* FactsViewModel.swift */; };
+		1043CD1724495225003C6D6B /* ManagerInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1624495225003C6D6B /* ManagerInjector.swift */; };
 		107CC4E12444ED7E005960C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E02444ED7E005960C4 /* AppDelegate.swift */; };
 		107CC4E32444ED7E005960C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E22444ED7E005960C4 /* SceneDelegate.swift */; };
 		107CC4E52444ED7E005960C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E42444ED7E005960C4 /* ContentView.swift */; };
@@ -43,6 +50,13 @@
 
 /* Begin PBXFileReference section */
 		100EECFB244559AE0038FF7E /* CountryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetails.swift; sourceTree = "<group>"; };
+		1043CD0724494169003C6D6B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1043CD0924494CC1003C6D6B /* CodeExtended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeExtended.swift; sourceTree = "<group>"; };
+		1043CD0B24494D95003C6D6B /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		1043CD0D24494E77003C6D6B /* FactRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactRequest.swift; sourceTree = "<group>"; };
+		1043CD1024494FA6003C6D6B /* FactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsManager.swift; sourceTree = "<group>"; };
+		1043CD1324495200003C6D6B /* FactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewModel.swift; sourceTree = "<group>"; };
+		1043CD1624495225003C6D6B /* ManagerInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInjector.swift; sourceTree = "<group>"; };
 		107CC4DD2444ED7E005960C4 /* Covid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107CC4E02444ED7E005960C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107CC4E22444ED7E005960C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +104,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1043CD062449414E003C6D6B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1043CD0724494169003C6D6B /* APIService.swift */,
+				1043CD0924494CC1003C6D6B /* CodeExtended.swift */,
+				1043CD0B24494D95003C6D6B /* Requestable.swift */,
+				1043CD0D24494E77003C6D6B /* FactRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1043CD0F24494F96003C6D6B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1043CD1024494FA6003C6D6B /* FactsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1043CD12244951EF003C6D6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1043CD1324495200003C6D6B /* FactsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1043CD1524495214003C6D6B /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				1043CD1624495225003C6D6B /* ManagerInjector.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
 		107CC4D42444ED7E005960C4 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +162,10 @@
 		107CC4DF2444ED7E005960C4 /* Covid */ = {
 			isa = PBXGroup;
 			children = (
+				1043CD1524495214003C6D6B /* DependencyInjection */,
+				1043CD12244951EF003C6D6B /* ViewModel */,
+				1043CD0F24494F96003C6D6B /* Managers */,
+				1043CD062449414E003C6D6B /* Network */,
 				107CC51924454A5F005960C4 /* Model */,
 				107CC5162444F918005960C4 /* Scenes */,
 				107CC4E02444ED7E005960C4 /* AppDelegate.swift */,
@@ -306,12 +359,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				107CC4E12444ED7E005960C4 /* AppDelegate.swift in Sources */,
+				1043CD1124494FA6003C6D6B /* FactsManager.swift in Sources */,
 				107CC4E32444ED7E005960C4 /* SceneDelegate.swift in Sources */,
+				1043CD1424495200003C6D6B /* FactsViewModel.swift in Sources */,
 				107CC51824454776005960C4 /* FactModel.swift in Sources */,
 				107CC4E52444ED7E005960C4 /* ContentView.swift in Sources */,
+				1043CD0A24494CC1003C6D6B /* CodeExtended.swift in Sources */,
+				1043CD0E24494E77003C6D6B /* FactRequest.swift in Sources */,
 				107CC51B24454A78005960C4 /* CountriesModel.swift in Sources */,
+				1043CD1724495225003C6D6B /* ManagerInjector.swift in Sources */,
 				107CC5132444F20F005960C4 /* CountriesView.swift in Sources */,
+				1043CD0824494169003C6D6B /* APIService.swift in Sources */,
 				107CC5152444F250005960C4 /* AboutView.swift in Sources */,
+				1043CD0C24494D95003C6D6B /* Requestable.swift in Sources */,
 				107CC5112444F1EF005960C4 /* GlobalView.swift in Sources */,
 				100EECFC244559AE0038FF7E /* CountryDetails.swift in Sources */,
 			);

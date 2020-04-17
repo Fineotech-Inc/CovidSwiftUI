@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FactsModel {
+struct FactsModel: Codable {
     
     var cases: Int
     var deaths: Int
