@@ -23,9 +23,18 @@ final class FactsViewModel: ManagerInjected, ViewModel {
         let facts = factsManager.fetchFacts()
             .mapError { error -> NetworkError in
                 error
-            }.sink(receiveCompletion: { _ in
-                print("Error")
+            }.sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    // no associdate data, but you can react to knowing the requess have been completed
+                    break
+                case .failure(let error):
+                    print("received the error", error)
+                }
             }, receiveValue: { factsModel in
+                // do what you want with the resulting value passed down
+                // be aware that depending on the publisher, this closure
+                // may be invoked multiple times.
                 self.state = FactsState(facts: factsModel)
             })
         cancellables += [facts]
