@@ -6,12 +6,41 @@
 //  Copyright © 2020 Fineotech Inc. All rights reserved.
 //
 
+import Combine
 import Foundation
 
-struct FactsViewModel: ManagerInjected {
+final class FactsViewModel: ManagerInjected, ViewModel {
+    
+    @Published
+    private(set) var state: FactsState = FactsState(facts: FactsModel())
+    // Call FetchFacts on On Appear
+    private let onAppearSubject = PassthroughSubject<Void, Never>()
+    private var cancellables: [AnyCancellable] = []
+    
+
     
     func fetchFacts() {
         let facts = factsManager.fetchFacts()
-            .print().sink(receiveCompletion: { _ in }, receiveValue: { print($0)})
+            .mapError { error -> NetworkError in
+                error
+            }.sink(receiveCompletion: { _ in
+                print("Error")
+            }, receiveValue: { factsModel in
+                self.state = FactsState(facts: factsModel)
+            })
+        cancellables += [facts]
+    }
+    
+
+//
+//    private func bindOutputs() {
+//
+//    }
+    
+    func trigger(_ input: FactsInput) {
+        switch input {
+            case .onAppear:
+                fetchFacts()
+        }
     }
 }

@@ -23,6 +23,5 @@ final class FactsManager: FactsManagerProtocol {
         return APIService().run(factRequest)
             .map(\.value)
             .eraseToAnyPublisher()
-    
     }
 }

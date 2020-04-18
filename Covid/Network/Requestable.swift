@@ -45,12 +45,12 @@ protocol Requestable {
 extension Requestable {
     
     var baseURL: String {
-        return ""
+        return "https://coronavirus-19-api.herokuapp.com"
     }
 
     
     var urlPath: String {
-        return "https://coronavirus-19-api.herokuapp.com"
+        return ""
     }
 
     var httpMethod: HTTPMethod {
@@ -84,7 +84,7 @@ extension Requestable {
     }
 
     var defaultHttpHeaders: [String: String] {
-        let headers = ["":""]
+        let headers = ["Content-Type":"application/json"]
         return headers
     }
     

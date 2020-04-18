@@ -8,24 +8,36 @@
 
 import SwiftUI
 
+struct FactsState {
+    var facts: FactsModel?
+}
+
+// MARK: Input
+enum FactsInput {
+    case onAppear
+}
+
+
 struct GlobalView: View {
-    
-    var factsModel: FactsModel
+    // Make is local object instaed of ENV
+    @EnvironmentObject
+    private var viewModel: AnyViewModel<FactsState, FactsInput>
     
     var body: some View {
         VStack(spacing: 15) {
-            if factsModel.cases > 0 {
-                InfoView(numOfCases: factsModel.cases, subtitle: "Cases")
+            if viewModel.facts?.cases ?? 0 > 0 {
+                InfoView(numOfCases: viewModel.facts?.cases ?? 0, subtitle: "Cases")
             }
-            if factsModel.deaths > 0 {
-                InfoView(numOfCases: factsModel.deaths, subtitle: "Deaths")
+            if viewModel.facts?.deaths ?? 0 > 0 {
+                InfoView(numOfCases: viewModel.facts?.deaths ?? 0, subtitle: "Deaths")
             }
-            if factsModel.recovered > 0 {
-                InfoView(numOfCases: factsModel.recovered, subtitle: "Recovered")
+            if viewModel.facts?.recovered ?? 0 > 0 {
+                InfoView(numOfCases: viewModel.facts?.recovered ?? 0, subtitle: "Recovered")
             }
             Spacer()
         }.background(Color.green)
         .navigationBarTitle(Text("Global"), displayMode: .inline)
+            .onAppear(perform: { self.viewModel.trigger(.onAppear)})
     }
 }
 
@@ -43,8 +55,7 @@ struct InfoView: View {
 
 
 struct GlobalView_Previews: PreviewProvider {
-    static let facts = FactsModel(cases: 1924635, deaths: 119686, recovered: 444836)
     static var previews: some View {
-        GlobalView(factsModel: facts)
+        GlobalView()
     }
 }

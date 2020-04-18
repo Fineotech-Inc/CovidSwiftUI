@@ -12,4 +12,8 @@ struct FactRequest: Requestable {
     var urlPath: String {
         return "/all"
     }
+    
+    var httpMethod: HTTPMethod {
+        return .get
+    }
 }

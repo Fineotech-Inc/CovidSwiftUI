@@ -12,11 +12,13 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var selectedTab: Tab = .global
-    let facts = FactsModel(cases: 1924635, deaths: 119686, recovered: 444836)
+    
+    //let facts = FactsModel(cases: 1924635, deaths: 119686, recovered: 444836)
+    let viewModel = AnyViewModel(FactsViewModel())
     var body: some View {
         TabView(selection: $selectedTab) {
             NavigationView {
-                GlobalView(factsModel: facts).tabItem {
+                GlobalView().environmentObject(viewModel).tabItem {
                     Text("Global")
                     Image(systemName: "globe")
                 }.tag(Tab.global)
