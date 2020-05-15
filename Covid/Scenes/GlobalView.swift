@@ -37,7 +37,7 @@ struct GlobalView: View {
             Spacer()
         }.background(Color.green)
         .navigationBarTitle(Text("Global"), displayMode: .inline)
-            .onAppear(perform: { self.viewModel.trigger(.onAppear)})
+        .onAppear(perform: { self.viewModel.trigger(.onAppear)})
     }
 }
 

@@ -20,6 +20,7 @@
 		1043CD1E2449567B003C6D6B /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD1D2449567B003C6D6B /* Loggable.swift */; };
 		1043CD22244964A0003C6D6B /* ServerTrustManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD21244964A0003C6D6B /* ServerTrustManager.swift */; };
 		1043CD2424496F6A003C6D6B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043CD2324496F6A003C6D6B /* ViewModel.swift */; };
+		10496392246DECC600BFBE02 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10496391246DECC600BFBE02 /* CountriesViewModel.swift */; };
 		107CC4E12444ED7E005960C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E02444ED7E005960C4 /* AppDelegate.swift */; };
 		107CC4E32444ED7E005960C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E22444ED7E005960C4 /* SceneDelegate.swift */; };
 		107CC4E52444ED7E005960C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107CC4E42444ED7E005960C4 /* ContentView.swift */; };
@@ -67,6 +68,7 @@
 		1043CD1D2449567B003C6D6B /* Loggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
 		1043CD21244964A0003C6D6B /* ServerTrustManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTrustManager.swift; sourceTree = "<group>"; };
 		1043CD2324496F6A003C6D6B /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		10496391246DECC600BFBE02 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		107CC4DD2444ED7E005960C4 /* Covid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107CC4E02444ED7E005960C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107CC4E22444ED7E005960C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				1043CD2324496F6A003C6D6B /* ViewModel.swift */,
 				1043CD1324495200003C6D6B /* FactsViewModel.swift */,
+				10496391246DECC600BFBE02 /* CountriesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -186,10 +189,10 @@
 			isa = PBXGroup;
 			children = (
 				1043CD1524495214003C6D6B /* DependencyInjection */,
-				1043CD12244951EF003C6D6B /* ViewModel */,
 				1043CD0F24494F96003C6D6B /* Managers */,
 				1043CD062449414E003C6D6B /* Network */,
 				107CC51924454A5F005960C4 /* Model */,
+				1043CD12244951EF003C6D6B /* ViewModel */,
 				107CC5162444F918005960C4 /* Scenes */,
 				107CC4E02444ED7E005960C4 /* AppDelegate.swift */,
 				107CC4E22444ED7E005960C4 /* SceneDelegate.swift */,
@@ -396,6 +399,7 @@
 				107CC51B24454A78005960C4 /* CountriesModel.swift in Sources */,
 				1043CD2424496F6A003C6D6B /* ViewModel.swift in Sources */,
 				1043CD1724495225003C6D6B /* ManagerInjector.swift in Sources */,
+				10496392246DECC600BFBE02 /* CountriesViewModel.swift in Sources */,
 				107CC5132444F20F005960C4 /* CountriesView.swift in Sources */,
 				1043CD0824494169003C6D6B /* APIService.swift in Sources */,
 				107CC5152444F250005960C4 /* AboutView.swift in Sources */,
@@ -568,6 +572,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Covid/Preview Content\"";
+				DEVELOPMENT_TEAM = B5C3CQGCFN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Covid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -587,6 +592,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Covid/Preview Content\"";
+				DEVELOPMENT_TEAM = B5C3CQGCFN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Covid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,7 +613,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CovidTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,7 +634,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CovidTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

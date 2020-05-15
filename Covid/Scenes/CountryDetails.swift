@@ -15,10 +15,3 @@ struct CountryDetails: View {
         Text(country.country).navigationBarTitle(Text(country.country))
     }
 }
-
-struct CaseDetails_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        CountryDetails(country: testData[0])
-    }
-}

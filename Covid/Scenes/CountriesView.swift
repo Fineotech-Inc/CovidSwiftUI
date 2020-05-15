@@ -8,24 +8,28 @@
 
 import SwiftUI
 
-struct CountriesView: View {
-    var countries: [Country] = []
+struct CountryListState {
+    var countries: [Country]
+}
 
+// MARK: Input
+enum CountryListInput {
+    case onAppear
+}
+
+struct CountriesView: View {
+    @EnvironmentObject
+    var viewModel: AnyViewModel<CountryListState, CountryListInput>
     var body: some View {
         NavigationView {
-            List(countries) { country in
+            List(viewModel.countries) { country in
                 NavigationLink(destination: CountryDetails(country: country)) {
                     CountryCell(country: country)
                 }
-            }.navigationBarTitle(Text("Cases"))
+            }.navigationBarTitle(Text("Countries"), displayMode: .inline)
+            .onAppear(perform: { self.viewModel.trigger(.onAppear)})
         }
 
-    }
-}
-
-struct Countries_Previews: PreviewProvider {
-    static var previews: some View {
-        CountriesView(countries: testData)
     }
 }
 

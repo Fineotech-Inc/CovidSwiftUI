@@ -12,8 +12,8 @@ import Combine
 protocol FactsManagerProtocol {
     
     func fetchFacts() -> AnyPublisher<FactsModel, NetworkError>
+    func fetchCountries() -> AnyPublisher<[Country], NetworkError>
 }
-
 
 final class FactsManager: FactsManagerProtocol {
     
@@ -23,5 +23,12 @@ final class FactsManager: FactsManagerProtocol {
         return APIService().run(factRequest)
             .map(\.value)
             .eraseToAnyPublisher()
+    }
+    
+    func fetchCountries() -> AnyPublisher<[Country], NetworkError> {
+        let countryRequest = CountriesRequest()
+        return APIService().run(countryRequest)
+        .map(\.value)
+        .eraseToAnyPublisher()
     }
 }

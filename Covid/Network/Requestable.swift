@@ -48,7 +48,6 @@ extension Requestable {
         return "https://coronavirus-19-api.herokuapp.com"
     }
 
-    
     var urlPath: String {
         return ""
     }

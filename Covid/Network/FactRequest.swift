@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 struct FactRequest: Requestable {
     
     var urlPath: String {
@@ -16,4 +17,16 @@ struct FactRequest: Requestable {
     var httpMethod: HTTPMethod {
         return .get
     }
+}
+
+struct CountriesRequest: Requestable {
+    
+    var urlPath: String {
+        return "/countries"
+    }
+    
+    var httpMethod: HTTPMethod {
+        return .get
+    }
+    
 }

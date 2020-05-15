@@ -13,27 +13,26 @@ struct ContentView: View {
     
     @State private var selectedTab: Tab = .global
     
-    //let facts = FactsModel(cases: 1924635, deaths: 119686, recovered: 444836)
     let viewModel = AnyViewModel(FactsViewModel())
+    let countriesviewModel = AnyViewModel(CountriesViewModel())
     var body: some View {
         TabView(selection: $selectedTab) {
-            NavigationView {
                 GlobalView().environmentObject(viewModel).tabItem {
                     Text("Global")
                     Image(systemName: "globe")
                 }.tag(Tab.global)
-            }
-            NavigationView {
-            CountriesView(countries: []).tabItem {
-                Text("Countries")
-                Image(systemName: "list.dash")
-            }.tag(Tab.countries)
-            }
+
+                CountriesView().environmentObject(countriesviewModel).tabItem {
+                    Text("Countries")
+                    Image(systemName: "list.dash")
+                }.tag(Tab.countries)
             
-            AboutView().tabItem {
-                Text("Countries")
-                Image(systemName: "list.dash")
-            }.tag(Tab.about)
+            
+                AboutView().tabItem {
+                    Text("About")
+                    Image(systemName: "list.dash")
+                }.tag(Tab.about)
+            
         }
     }
 }
