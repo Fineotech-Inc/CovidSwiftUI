@@ -8,10 +8,18 @@
 
 import SwiftUI
 
+struct CountryDetailState {
+    
+    var country: Country?
+}
+
+
 struct CountryDetails: View {
-    var country: Country
+    
+    @EnvironmentObject
+    var viewModel: AnyViewModel<CountryDetailState, Never>
     
     var body: some View {
-        Text(country.country).navigationBarTitle(Text(country.country))
+        Text(viewModel.country?.country ?? "").navigationBarTitle(Text(viewModel.country?.country ?? ""))
     }
 }

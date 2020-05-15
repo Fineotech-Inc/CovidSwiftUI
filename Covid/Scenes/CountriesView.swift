@@ -23,7 +23,7 @@ struct CountriesView: View {
     var body: some View {
         NavigationView {
             List(viewModel.countries) { country in
-                NavigationLink(destination: CountryDetails(country: country)) {
+                NavigationLink(destination: CountryDetails().environmentObject(AnyViewModel(CountryDetailModel(country: country)))) {
                     CountryCell(country: country)
                 }
             }.navigationBarTitle(Text("Countries"), displayMode: .inline)
